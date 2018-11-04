@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-group">
+        <form class="form__login">
+            <label for="input__email" class="label label__email">Email</label>
+            <input type="text" class="input input__email" autocomplete="username" placeholder="Enter email">
+            <label for="input__password" class="label label__password">Password</label>
+            <input type="password" class="input input__password" autocomplete="current-password" placeholder="Enter password">
+        </form>
+        <form class="form__submit">
+            <input type="button" class="btn btn__login" value="Log in">
+            <input type="button" class="btn btn__signup" value="Register">
+        </form>
+        <p class="form__error"></p>
+    </div>
+    <button class="btn--hide btn__logout ">Log out</button>
+    <div class="post-group">
+        <div class="post">
+
+        </div>
+    </div>
+</div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
