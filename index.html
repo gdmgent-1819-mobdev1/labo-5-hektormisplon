@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="container">
+<div class="container container__auth">
     <div class="form-group">
         <form class="form__login">
             <label for="input__email" class="label label__email">Email</label>
@@ -17,15 +17,17 @@
             <input type="password" class="input input__password" autocomplete="current-password" placeholder="Enter password">
         </form>
         <form class="form__submit">
+            <p class="form__error"></p>
             <input type="button" class="btn btn__login" value="Log in">
             <input type="button" class="btn btn__signup" value="Register">
         </form>
-        <p class="form__error"></p>
     </div>
-    <button class="btn--hide btn__logout ">Log out</button>
+</div>
+
+<div class="container container__blog">
+    <input type="button" class="btn btn__logout" value="Log out">
     <div class="post-group">
         <div class="post">
-
         </div>
     </div>
 </div>
