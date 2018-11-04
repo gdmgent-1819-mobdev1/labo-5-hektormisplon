@@ -1,15 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 html, body {
-  padding: none;
-  margin: none;
-  font-family: 'Roboto';
-  background: #96b7e6; }
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto'; }
 
 .container {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid red; }
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
 
 .form-group {
   max-width: 18em;
@@ -21,12 +19,6 @@ html, body {
   border-radius: 2%;
   display: flex;
   flex-direction: column; }
-
-.container__blog--hide {
-  visibility: hidden; }
-
-.container__auth--hide {
-  visibility: hidden; }
 
 .form__login {
   display: flex;
@@ -69,7 +61,24 @@ html, body {
 .form__error {
   position: absolute;
   margin-top: 6em;
-  color: white;
+  color: #e8ebfa;
   font-size: 0.8em; }
+
+.container__auth {
+  background: #96b7e6; }
+
+.container__blog {
+  background: #e8ebfa; }
+
+.blog__header {
+  margin: 3em 3em 3em 3em; }
+
+.container__blog--hide {
+  visibility: hidden;
+  display: none; }
+
+.container__auth--hide {
+  visibility: hidden;
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -3,17 +3,15 @@
 
 
 html, body {
-    padding: none;
-    margin: none;
+    padding: 0;
+    margin: 0;
     font-family: 'Roboto';
-    background: $color__primary--dark;
 }
 
 .container {
-    position: absolute;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
-    border: 1px solid red;
 }
 
 .form-group {
@@ -28,12 +26,6 @@ html, body {
     flex-direction: column;
 }
 
-.container__blog--hide {
-    visibility: hidden;
-}
-.container__auth--hide {
-    visibility: hidden;
-}
 
 .form__login {
     display: flex;
@@ -89,4 +81,29 @@ html, body {
     margin-top: 6em;
     color: $color__primary--lighter;
     font-size: 0.8em;
+}
+
+.container__auth {
+    background: $color__primary--dark;
+}
+
+.container__blog {
+    background: $color__primary--lighter;
+}
+
+.blog__header {
+    margin: 3em 3em 3em 3em;
+}
+
+.blog__editor {
+    
+}
+
+.container__blog--hide {
+    visibility: hidden;
+    display: none;
+}
+.container__auth--hide {
+    visibility: hidden;
+    display: none;
 }

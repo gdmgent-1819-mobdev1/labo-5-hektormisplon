@@ -23,6 +23,8 @@
 
     const formError = document.querySelector('.form__error');
 
+    const headerEl = document.querySelector('.blog__header__greet');
+
 
 //  SEND NOTIFICATION
     function notify(notificationText) {
@@ -63,6 +65,8 @@
             .then(response => {
                 console.log(response);
                 notify(`Welcome back ${email}!`);
+                headerEl.textContent = `Welcome back ${email}!`;
+
             })
             // catch errors from auth promise
             .catch(error => {
@@ -81,6 +85,7 @@
             .then(response => {
                 verifyEmail(response.user);
                 notify(`You signed up succesfully with ${email}, please confirm your registration.`);
+                headerEl.textContent = `Welcome ${email}, please check your email to confirm your registration!`;
             })
             // catch errors from auth promise
             .catch(error => {

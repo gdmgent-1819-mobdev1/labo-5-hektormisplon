@@ -25,13 +25,24 @@
 </div>
 
 <div class="container container__blog">
-    <input type="button" class="btn btn__logout" value="Log out">
-    <div class="post-group">
-        <div class="post">
+    <header class="blog__header">
+        <h1 class="blog__header__greet">Welcome</h1>
+        <input type="button" class="btn btn__logout" value="Log out">
+    </header>
+    <form class="blog__editor">
+        <textarea name="blog__editor__input" id="blog__editor"></textarea>
+        <input type="button" class="btn btn__post" value="Post Article">
+    </form>
+    <div class="blog__post-group">
+        <div class="blog__post">
+            <h1 class="blog__post__title"></h1>
+            <p class="blog__post__body"></p>
         </div>
     </div>
 </div>
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-    <script src="js/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script src="js/app.js"></script>
+<script src="ckeditor/ckeditor.js"></script>
+<script src="js/blog-editor.js"></script>
 </body>
 </html>
