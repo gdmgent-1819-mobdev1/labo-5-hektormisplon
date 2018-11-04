@@ -1,18 +1,38 @@
-* {
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import 'base';
+
+
+html, body {
     padding: none;
     margin: none;
+    font-family: 'Roboto';
+    background: $color__primary--dark;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+.container {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid red;
 }
 
 .form-group {
-    width: 33vw;
-    margin: 0px auto;
-    margin-top: 33%;
-    height: 33%;
+    max-width: 18em;
+    height: 15em;
+    margin: 10em auto;
     padding: 1em;
+    background: $color__primary;
+    box-shadow: 0px .2em 3em .2em $color__primary--darker;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__blog--hide {
+    visibility: hidden;
+}
+.container__auth--hide {
+    visibility: hidden;
 }
 
 .form__login {
@@ -21,13 +41,14 @@ body {
     width: 100%;
     padding: 0 0 1em 0;
 }
-.form-group--hide {
-    display: none;
-}
+
 
 .input {
     margin: 1em 0;
     height: 3em;
+    border: none;
+    background: #fff;
+    padding: 1em;
 }
 
 .label {
@@ -35,19 +56,27 @@ body {
 
 .form__submit {
     display: flex;
+    height: 3em;
 }
 
 .btn {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    height: 3em;
+    height: 100%;
+    background-color: $color__primary--light;
     border: none;
+    border-radius: .3em;
+    margin: .1em;
+}
+
+.btn__signup {
+    background: none;
 }
 
 .btn__logout {
     width: 6em;
-    background-color: #ff5500;
+    background-color: $color__primary--darker;
     color: #fff;
 }
 
@@ -56,6 +85,8 @@ body {
 }
 
 .form__error {
-    color: #ff5500;
+    position: absolute;
+    margin-top: 6em;
+    color: $color__primary--lighter;
     font-size: 0.8em;
 }

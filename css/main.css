@@ -1,16 +1,32 @@
-* {
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+html, body {
   padding: none;
-  margin: none; }
+  margin: none;
+  font-family: 'Roboto';
+  background: #96b7e6; }
 
-body {
-  font-family: Arial, Helvetica, sans-serif; }
+.container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid red; }
 
 .form-group {
-  width: 33vw;
-  margin: 0px auto;
-  margin-top: 33%;
-  height: 33%;
-  padding: 1em; }
+  max-width: 18em;
+  height: 15em;
+  margin: 10em auto;
+  padding: 1em;
+  background: #bfcff0;
+  box-shadow: 0px 0.2em 3em 0.2em #6ca4dd;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column; }
+
+.container__blog--hide {
+  visibility: hidden; }
+
+.container__auth--hide {
+  visibility: hidden; }
 
 .form__login {
   display: flex;
@@ -18,33 +34,42 @@ body {
   width: 100%;
   padding: 0 0 1em 0; }
 
-.form-group--hide {
-  display: none; }
-
 .input {
   margin: 1em 0;
-  height: 3em; }
+  height: 3em;
+  border: none;
+  background: #fff;
+  padding: 1em; }
 
 .form__submit {
-  display: flex; }
+  display: flex;
+  height: 3em; }
 
 .btn {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  height: 3em;
-  border: none; }
+  height: 100%;
+  background-color: #e8edfa;
+  border: none;
+  border-radius: .3em;
+  margin: .1em; }
+
+.btn__signup {
+  background: none; }
 
 .btn__logout {
   width: 6em;
-  background-color: #ff5500;
+  background-color: #6ca4dd;
   color: #fff; }
 
 .btn--hide {
   display: none; }
 
 .form__error {
-  color: #ff5500;
+  position: absolute;
+  margin-top: 6em;
+  color: white;
   font-size: 0.8em; }
 
 /*# sourceMappingURL=main.css.map */
