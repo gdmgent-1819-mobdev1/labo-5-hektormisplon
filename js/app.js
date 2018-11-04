@@ -64,7 +64,7 @@
         auth.signInWithEmailAndPassword(email, password)
             .then(response => {
                 console.log(response);
-                notify(`Welcome back ${email}!`);
+                notify(`Welcome back, ${email}!`);
                 headerEl.textContent = `Welcome back ${email}!`;
 
             })

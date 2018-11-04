@@ -4,11 +4,6 @@ html, body {
   margin: 0;
   font-family: 'Roboto'; }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; }
-
 .form-group {
   max-width: 18em;
   height: 15em;
@@ -45,12 +40,21 @@ html, body {
   background-color: #e8edfa;
   border: none;
   border-radius: .3em;
-  margin: .1em; }
+  margin: .1em;
+  padding: 1em; }
 
 .btn__signup {
   background: none; }
 
 .btn__logout {
+  height: 100%;
+  width: 6em;
+  background-color: #bfcff0;
+  color: #fff; }
+
+.btn__post {
+  margin: 1em 0;
+  height: 100%;
   width: 6em;
   background-color: #6ca4dd;
   color: #fff; }
@@ -65,13 +69,13 @@ html, body {
   font-size: 0.8em; }
 
 .container__auth {
+  height: 100vh;
+  overflow: hidden;
   background: #96b7e6; }
 
 .container__blog {
+  padding: 6em;
   background: #e8ebfa; }
-
-.blog__header {
-  margin: 3em 3em 3em 3em; }
 
 .container__blog--hide {
   visibility: hidden;
