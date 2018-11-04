@@ -29,8 +29,7 @@
         if (Notification.permission !== 'granted') {
             Notification.requestPermission(function(permission) {
                 if(permission === 'granted') {
-                    notify(`Thank you for enabling notifications.`);
-                    notify(notificationText);
+                    notify('Notifications enabled: ' + notificationText);
                 }
             });
         }
@@ -41,6 +40,17 @@
           setTimeout(notification.close.bind(notification), 4000);
         }
       }
+
+//  SEND VERIFICATION EMAIL
+    function verifyEmail(email) {
+    email.sendEmailVerification()
+        .then(function() {
+            console.log('Email sent');
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+    }
 
 //  LOG IN EVENT
     loginBtn.addEventListener('click', e => {
@@ -69,8 +79,7 @@
 
         auth.createUserWithEmailAndPassword(email, password)
             .then(response => {
-                console.log(response);
-                formError.textContent = `You registered using ${email}`;
+                verifyEmail(response.user);
                 notify(`You signed up succesfully with ${email}, please confirm your registration.`);
             })
             // catch errors from auth promise
@@ -98,3 +107,6 @@
             blogContainer.classList.replace('container__blog', 'container__blog--hide');
         }
     });
+
+
+
