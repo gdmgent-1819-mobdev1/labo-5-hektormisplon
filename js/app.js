@@ -19,6 +19,8 @@
     const passwordEl = document.querySelector('.input__password');
     const loginBtn = document.querySelector('.btn__login');
     const registerBtn = document.querySelector('.btn__signup');
+    const googleLoginBtn = document.querySelector('.btn__google-login');
+
     const logoutBtn = document.querySelector('.btn__logout');
 
     const formError = document.querySelector('.form__error');
@@ -54,7 +56,7 @@
         });
     }
 
-//  LOG IN EVENT
+//  SIGN IN EVENT
     loginBtn.addEventListener('click', e => {
 
         const email = emailEl.value;
@@ -111,6 +113,27 @@
             authContainer.classList.replace('container__auth--hide', 'container__auth');
             blogContainer.classList.replace('container__blog', 'container__blog--hide');
         }
+    });
+
+// GOOGLE SIGN IN
+
+      googleLoginBtn.addEventListener('click', e => {
+
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        const email = emailEl.value;
+        const password = passwordEl.value;
+        const auth = firebase.auth();
+
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+          }).catch(function(error) {
+            formError.textContent = error.message;
+          });
     });
 
 
