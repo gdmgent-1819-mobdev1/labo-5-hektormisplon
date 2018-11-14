@@ -1,5 +1,5 @@
 $color__primary:#bfcff0;
 $color__primary--light: lighten(adjust-hue($color__primary, 5), 10%);
-$color__primary--lighter: lighten(adjust-hue($color__primary, 10), 10%);
-$color__primary--dark: darken(adjust-hue($color__primary, -5), 10%);
-$color__primary--darker: darken(adjust-hue($color__primary, -10), 20%);
+$color__primary--lighter: lighten(adjust-hue($color__primary, -10), 10%);
+$color__primary--dark: darken(adjust-hue($color__primary, 0), 10%);
+$color__primary--darker: darken(adjust-hue($color__primary, 0), 15%);

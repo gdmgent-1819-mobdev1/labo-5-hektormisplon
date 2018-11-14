@@ -61,9 +61,8 @@
 
         const email = emailEl.value;
         const password = passwordEl.value;
-        const auth = firebase.auth();
 
-        auth.signInWithEmailAndPassword(email, password)
+        firebase.auth().signInWithEmailAndPassword(email, password)
             .then(response => {
                 console.log(response);
                 notify(`Welcome back, ${email}!`);
@@ -81,9 +80,8 @@
 
         const email = emailEl.value;
         const password = passwordEl.value;
-        const auth = firebase.auth();
 
-        auth.createUserWithEmailAndPassword(email, password)
+        firebase.auth().createUserWithEmailAndPassword(email, password)
             .then(response => {
                 verifyEmail(response.user);
                 notify(`You signed up succesfully with ${email}, please confirm your registration.`);
@@ -93,6 +91,22 @@
             .catch(error => {
                 formError.textContent = error.message;
             });
+    });
+    // GOOGLE SIGN IN
+
+    googleLoginBtn.addEventListener('click', e => {
+
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+          }).catch(function(error) {
+            formError.textContent = error.message;
+          });
     });
 
 //  LOG OUT EVENT
@@ -113,27 +127,6 @@
             authContainer.classList.replace('container__auth--hide', 'container__auth');
             blogContainer.classList.replace('container__blog', 'container__blog--hide');
         }
-    });
-
-// GOOGLE SIGN IN
-
-      googleLoginBtn.addEventListener('click', e => {
-
-        const provider = new firebase.auth.GoogleAuthProvider();
-
-        const email = emailEl.value;
-        const password = passwordEl.value;
-        const auth = firebase.auth();
-
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // The signed-in user info.
-            var user = result.user;
-            // ...
-          }).catch(function(error) {
-            formError.textContent = error.message;
-          });
     });
 
 

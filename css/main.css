@@ -7,10 +7,10 @@ html, body {
 .form-group {
   max-width: 18em;
   height: 15em;
-  margin: 10em auto;
+  margin: 10em auto 0;
   padding: 1em;
   background: #bfcff0;
-  box-shadow: 0px 0.2em 3em 0.2em #6ca4dd;
+  box-shadow: 0px 0.2em 3em 0.2em #81a1e1;
   border-radius: 2%;
   display: flex;
   flex-direction: column; }
@@ -56,7 +56,7 @@ html, body {
   margin: 1em 0;
   height: 100%;
   width: 6em;
-  background-color: #6ca4dd;
+  background-color: #81a1e1;
   color: #fff; }
 
 .btn--hide {
@@ -65,17 +65,17 @@ html, body {
 .form__error {
   position: absolute;
   margin-top: 6em;
-  color: #e8ebfa;
+  color: #e8f1fa;
   font-size: 0.8em; }
 
 .container__auth {
   height: 100vh;
   overflow: hidden;
-  background: #96b7e6; }
+  background: #96b0e6; }
 
 .container__blog {
   padding: 6em;
-  background: #e8ebfa; }
+  background: #fff; }
 
 .container__blog--hide {
   visibility: hidden;
@@ -85,16 +85,30 @@ html, body {
   visibility: hidden;
   display: none; }
 
+.blog__post {
+  background: #bfcff0;
+  padding: 2em;
+  margin: 1em 0; }
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  max-width: 18em;
+  height: 5em;
+  margin: 0 auto;
+  padding: 1em; }
+
 .btn-provider {
+  margin: 1em;
   border-radius: 50%;
   width: 3em;
   height: 3em;
-  background: #e8ebfa;
+  background: #e8f1fa;
   border: none;
-  box-shadow: 0px 0.2em 3em 0.2em #6ca4dd; }
+  box-shadow: 0px 0.2em 3em 0.2em #81a1e1; }
 
 .btn-provider__icon {
-  color: #96b7e6;
+  color: #96b0e6;
   width: 100%;
   height: 100%; }
 

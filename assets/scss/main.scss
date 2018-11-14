@@ -11,7 +11,7 @@ html, body {
 .form-group {
     max-width: 18em;
     height: 15em;
-    margin: 10em auto;
+    margin: 10em auto 0;
     padding: 1em;
     background: $color__primary;
     box-shadow: 0px .2em 3em .2em $color__primary--darker;
@@ -92,7 +92,7 @@ html, body {
 
 .container__blog {
     padding: 6em;
-    background: $color__primary--lighter;
+    background: #fff;
 }
 
 .blog__header {
@@ -110,7 +110,23 @@ html, body {
     display: none;
 }
 
+.blog__post {
+    background: $color__primary;
+    padding: 2em;
+    margin: 1em 0;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    max-width: 18em;
+    height: 5em;
+    margin: 0 auto;
+    padding: 1em;
+}
+
 .btn-provider {
+    margin: 1em;
     border-radius: 50%;
     width: 3em;
     height: 3em;
