@@ -21,8 +21,17 @@ database.once('value', function(snapshot){
             const blogPostEl = document.createElement('div');
             blogPostEl.setAttribute('class', 'blog__post');
 
-            const blogPostHeader = document.createElement('h4');
+            const blogPostHeader = document.createElement('h3');
             blogPostHeader.setAttribute('class', 'blog__post__header');
+
+            const blogPostBody = document.createElement('p');
+            blogPostBody.setAttribute('class', 'blog__post__body');
+
+            const blogPostDate = document.createElement('span');
+            blogPostDate.setAttribute('class', 'blog__post__date');
+
+            const blogPostAuthor = document.createElement('span');
+            blogPostAuthor.setAttribute('class', 'blog__post__author');
 
             const blogPost = {
                 title: post.val().title,
@@ -31,11 +40,14 @@ database.once('value', function(snapshot){
                 body: post.val().body
             }
             blogPostHeader.textContent += blogPost.title;
-            blogPostEl.textContent += blogPost.author;
-            blogPostEl.textContent += blogPost.body;
-            blogPostEl.textContent += blogPost.date;
+            blogPostBody.textContent += blogPost.body;
+            blogPostDate.textContent += `Written on ${blogPost.date}`;
+            blogPostAuthor.textContent += `Written by ${blogPost.author}`;
 
+            blogPostEl.append(blogPostAuthor);
             blogPostEl.append(blogPostHeader);
+            blogPostEl.append(blogPostBody);
+            blogPostEl.append(blogPostDate);
             blogPostGroupEl.append(blogPostEl);
         });
     }

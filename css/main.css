@@ -86,9 +86,26 @@ html, body {
   display: none; }
 
 .blog__post {
+  display: flex;
+  flex-direction: column;
   background: #bfcff0;
   padding: 2em;
-  margin: 1em 0; }
+  margin: 1em 0;
+  width: 100%; }
+
+.blog__post__date {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.8em;
+  font-style: italic; }
+
+.blog__post__author {
+  font-size: .8em;
+  font-style: italic; }
+
+.blog__post__body {
+  background: #e8f1fa;
+  padding: 1em; }
 
 .btn-group {
   display: flex;
